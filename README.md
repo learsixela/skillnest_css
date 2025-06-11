@@ -9,4 +9,6 @@ Pueden ser utilizados muchas veces para compartir código CSS repetido.
 Debe ser único y solo puede ser utilizado una vez en tu página.
 ## Atributo style 
 Directamente sobre la etiqueta HTML, ejemplo
+```
 <p class="pcolor" id="p5" style="color: cyan;">Parrafo 5</p>
+```
