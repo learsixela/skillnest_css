@@ -1,4 +1,10 @@
 /*comentarios css*/
+* {
+    margin: 0px;
+    padding: 0px;
+    /*outline: 1px solid red;*/
+}
+
 h1 {
     color:cornflowerblue;
     font-size: 50px;
@@ -12,6 +18,20 @@ p {
 /*2 forma, estilo por clase (.), solo alguna etiquetas*/
 .pcolor{
     color: blue; /*!important;*/
+}
+
+/*Selector descendente*/
+/*se aplica estilo solo al elemento hijo  */
+/*por clase*/
+.divcolor p{
+    font-size: 12px;
+}
+.divcolor h2{
+    font-size: 15px;/*h2 2.1*/
+}
+/*por id*/
+#div2 h2{
+    font-size: 10px;
 }
 
 /*3 forma, estilo por id (#), estilo propio de una sola etiqueta
