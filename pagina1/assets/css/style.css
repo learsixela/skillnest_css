@@ -14,7 +14,9 @@ se ven afectadas */
 p {
     color: red;
 }
-
+p {
+    color:rebeccapurple;
+}
 /*2 forma, estilo por clase (.), solo alguna etiquetas*/
 .pcolor{
     color: blue; /*!important;*/
