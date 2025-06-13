@@ -7,15 +7,37 @@
     <style>
         #padre{
             background-color: yellowgreen;
-            width: 400px;
-            height: 400px;
+            width: 200px;
+            height: 200px;
             /*border: 1px solid;*/
-            box-sizing: border-box;
+            box-sizing: border-box;/*distribuye los valores del padding, border y content*/
         }
-        #hijo, #hija{
+        #hijo{
             background-color: blue;
             width: 40px;
             height: 40px;
+            display: inline-block;/*convierte un elemento de bloque a un elemento de linea*/
+            vertical-align: top; /*alinea los elementos por el top(superior)*/
+        }
+
+        #hija{
+            background-color: blue;
+            width: 40px;
+            height: 80px;
+            display: inline-block;
+        }
+        .container{
+            background-color: beige;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .divhijos{
+            width: 40px;
+            height: 40px;
+            background-color: blueviolet;
         }
     </style>
 </head>
@@ -23,6 +45,11 @@
     <div id="padre">
         <div id="hijo"></div>
         <div id="hija"></div>
+    </div>
+
+    <div class="container">
+        <div class="divhijos"> div 1</div>
+        <div class="divhijos"> div 2</div>
     </div>
 </body>
 </html>
