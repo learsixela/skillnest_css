@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividad, Media Query::</title>
+    <style>
+    /* Diseño para móviles, que a su vez aplicarán para pantallas más grandes */
+    body {
+        font-size: 32px;
+        background-color: lightgray;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+        background-color: yellow;
+    }
+
+    /* Para pantallas más grandes */
+    /*@media (min-width: 768px) {*/
+    @media (min-width: 768px) and (max-width: 1023px){
+        body {
+            background-color: bisque;
+            font-size: 16px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: yellowgreen;
+        }
+    }
+
+    /* Para desktops (mínimo 1024px) */
+    /*@media (min-width: 1024px) */
+    @media (min-width: 1024px) and (max-width: 1439px)
+    {
+        body{
+            background-color: white;
+        }
+        
+        .container {
+            width: 60%;
+            background-color: greenyellow;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>esto es un parrafo</p>
+    </div>
+</body>
+</html>
