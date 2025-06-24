@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del DOM.::</title>
+</head>
+<body>
+    <h1>Hola Mundo!!</h1>
+    <button onclick="disminuir()">-</button>
+    <img src="assets/img/invierno.jpg" alt="invierno" width="100">
+    <button onclick="ampliar()">+</button>
+
+    <input type="button" value="Saludar" class="boton" id="saludar" style="">
+    <input type="button" value="Despedir" class="boton" id="despedir">
+
+    <script>
+        var tamanio= 300;
+
+
+        /*
+        querySelector() : selecciona el primer elemento (clase) o unico(id) 
+        */
+
+        const boton = document.querySelector('.boton');//el primer elemento con clase
+        const boton2 = document.querySelector('#despedir');//solo un elemento
+        
+        /*
+        querySelectorAll()
+        */
+
+        const botones = document.querySelectorAll('.boton');//seleccionar todo los que tengan la clase
+        const enlaces =  document.querySelectorAll('.enlaces');// no existe
+
+        if(enlaces.length==0){
+            console.log("No elementos en el nodo");
+            alert("No elementos en el nodo");
+        }
+
+        /*manipulacion de elementos*/
+        let encabezado = document.querySelector('h1');
+        encabezado.textContent = 'Nuevo Título';
+        encabezado.innerHTML = 'cambio con InnerHTML';
+
+        /*madificar atributos*/
+        let imagen = document.querySelector('img');
+        //imagen.setAttribute('src', 'nueva-imagen.jpg');
+        //imagen.setAttribute('alt', 'no existe');
+        imagen.setAttribute('width','300');
+
+        function disminuir(){
+            imagen.setAttribute('width',tamanio-=10);
+        }
+
+        function ampliar(){
+            imagen.setAttribute('width',tamanio+=10);
+        }
+    </script>
+    <script src="assets/js/dom_script.js"></script>
+</body>
+</html>
