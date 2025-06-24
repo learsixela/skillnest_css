@@ -13,7 +13,10 @@
 
     <input type="button" value="Saludar" class="boton" id="saludar" style="">
     <input type="button" value="Despedir" class="boton" id="despedir">
-
+    <!--<button onclick="alert('¡Botón clickeado!')" id="clickear">Haz clic aquí</button>-->
+    <button id="clickear">Haz clic aquí</button>
+    <br>
+    <input type="text" id="nombre">
     <script>
         var tamanio= 300;
 
@@ -34,8 +37,16 @@
 
         if(enlaces.length==0){
             console.log("No elementos en el nodo");
-            alert("No elementos en el nodo");
+            //alert("No elementos en el nodo");
         }
+        // si no existen elementos en la lista el foreach no falla(no hace nada)
+        enlaces.forEach(function(enlace){
+            enlace.style.color = 'red';
+        });
+
+        botones.forEach(function(boton) {
+            boton.style.color = 'red';  // Cambia el color de todos los enlaces a rojo
+        });
 
         /*manipulacion de elementos*/
         let encabezado = document.querySelector('h1');
@@ -55,7 +66,19 @@
         function ampliar(){
             imagen.setAttribute('width',tamanio+=10);
         }
+
+        /*agregar elementos al DOM appendChild()*/
+        let nuevoParrafo = document.createElement('p');//crear el elemento p
+        nuevoParrafo.textContent = 'Este es un párrafo agregado dinámicamente.';
+        document.body.appendChild(nuevoParrafo);
+        
+        /*eliminar elementos del DOM*/
+        document.body.removeChild(encabezado);
+
+
+
     </script>
+
     <script src="assets/js/dom_script.js"></script>
 </body>
 </html>
