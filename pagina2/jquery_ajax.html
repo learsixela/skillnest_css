@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Ajax</title>
+
+</head>
+<body>
+
+    <p id="p1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos iusto ducimus nobis recusandae tempore voluptatibus sint aliquid tenetur consectetur sit quo harum rem provident odio, dolorem numquam, amet a sequi.
+    </p>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Toggle</button>
+    <hr>
+    <button id="btn4">Slide Up</button>
+    <button id="btn5">Slide Down</button>
+    <button id="btn6">Slide Toggle</button>
+    <hr>
+
+
+
+    <!--enlaces-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>-->
+    
+    <!--<script src="assets/js/jquery-3.7.1.js"></script>-->
+
+    <script>
+        $(document).ready(function(){
+            //efecto
+            $('#p1').click(function() {
+                //alert("¡Has hecho clic en un botón!");
+                $('#p1').text('Hola mundo!!');
+            });
+
+            $('#btn1').click(function(){
+                $('#p1').hide();//ocultar el elemento
+            });
+
+            $('#btn2').click(function(){
+                $('#p1').show();//mostrar el elemento
+            });
+
+            $('#btn3').click(function(){
+                $('#p1').toggle();//mostrar/ocultar el elemento
+            });
+
+            $('#btn4').click(function(){
+                $('#p1').slideUp();
+            });
+            $('#btn5').click(function(){
+                $('#p1').slideDown();
+            });
+
+
+            //css
+
+            //manipulacion
+
+            //eventos
+
+
+
+        //fin jquery    
+        });
+
+    </script>
+</body>
+</html>
